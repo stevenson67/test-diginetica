@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("Inter_18pt-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("Inter_18pt-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PTSans-Regular";
+  src: url("PTSans-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PTSans-Bold";
+  src: url("PTSans-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/*# sourceMappingURL=fonts.css.map */

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__logo-catalog">
+        <div class="header__logo">
+            <img src="img/icon/logo.svg" alt="Логотип" class="logo__image">
+            <span class="logo__text">Логотип</span>
+        </div>
+        <a class="header__catalog" href="#">Каталог</a>
+    </div>
+
+    <div class="header__search">
+            <span class="header__search-icon">
+                <img src="img/icon/header-search.svg" alt="Search">
+            </span>
+        <input
+                type="text"
+                class="header__search-input"
+                placeholder="Поиск по 100 000 товаров"
+        >
+    </div>
+
+    <div class="header__search header__search--mobile">
+        <button class="header__back-button">
+            <img src="img/icon/arrow.svg" alt="Arrow">
+        </button>
+        <div class="header__input-wrapper">
+            <input
+                    type="text"
+                    class="header__search-input"
+                    placeholder="Запрос"
+                    value="Запрос"
+            />
+            <button class="header__clear-button">
+                <img src="img/icon/clear.svg" alt="Clear">
+            </button>
+            <button class="header__search-button">Найти</button>
+        </div>
+    </div>
+
+    <nav class="header__nav">
+        <ul class="header__links">
+            <li><a href="#" class="header__link">Информация о компании</a></li>
+            <li><a href="#" class="header__link">Контакты</a></li>
+            <li><a href="#" class="header__link">Полезные ссылки</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="catalog">
+    <!-- Боковая панель с фильтрами -->
+    <aside class="catalog__filters filters">
+        <div class="filters__category">
+            <ul class="filters__list filters__list--category">
+                <li class="filters__item filters__item--category">
+                    <a class="filters__link" href="#">Название категории <span>3</span></a>
+                    <ul class="filters__sublist">
+                        <li class="filters__subitem"><a href="#">Название категории <span>3</span></a></li>
+                        <li class="filters__subitem"><a href="#">Название категории <span>3</span></a></li>
+                        <li class="filters__subitem"><a href="#">Название категории <span>3</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filters__price">
+            <h3 class="filters__title filters__title--center">Цена</h3>
+            <div class="filters__range">
+                <div class="filters__wrapper">
+                    <span class="filters__before">от</span>
+                    <input type="text" class="filters__input filters__input--price" placeholder="5 500 Р">
+                </div>
+                <div class="filters__wrapper">
+                    <span class="filters__before">до</span>
+                    <input type="text" class="filters__input filters__input--price" placeholder="5 500 Р">
+                </div>
+            </div>
+        </div>
+
+        <div class="filters__brands">
+            <h3 class="filters__title filters__title--brands">Бренд <span class="filters__clear">Очистить</span></h3>
+            <div class="filters__search filters__search--brands">
+                    <span class="filters__search-icon">
+                        <img src="img/icon/filter-search.svg" alt="Search">
+                    </span>
+                <input class="filters__search-input" type="text" placeholder="Поиск">
+            </div>
+            <ul class="filters__list filters__list--brands">
+                <li class="filters__item filters__item--brands">
+                    <div class="filters__input filters__input--brands">
+                        <input type="checkbox" id="brand1" checked>
+                        <label for="brand1">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--brands">
+                    <div class="filters__input filters__input--brands">
+                        <input type="checkbox" id="brand2">
+                        <label for="brand2">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--brands">
+                    <div class="filters__input filters__input--brands">
+                        <input type="checkbox" id="brand3">
+                        <label for="brand3">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--brands">
+                    <div class="filters__input filters__input--brands">
+                        <input type="checkbox" id="brand4">
+                        <label for="brand4">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--brands">
+                    <div class="filters__input filters__input--brands">
+                        <input type="checkbox" id="brand5">
+                        <label for="brand5">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--brands">
+                    <div class="filters__input filters__input--brands">
+                        <input type="checkbox" id="brand6">
+                        <label for="brand6">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--brands">
+                    <div class="filters__input filters__input--brands">
+                        <input type="checkbox" id="brand7">
+                        <label for="brand7">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--brands">
+                    <div class="filters__input filters__input--brands">
+                        <input type="checkbox" id="brand8">
+                        <label for="brand8">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--brands">
+                    <div class="filters__input filters__input--brands">
+                        <input type="checkbox" id="brand9">
+                        <label for="brand9">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filters__size">
+            <h3 class="filters__title filters__title--center">Размер</h3>
+            <ul class="filters__list filters__list--size">
+                <li class="filters__item filters__item--size">
+                    <div class="filters__input filters__input--size">
+                        <input type="checkbox" id="size1" checked>
+                        <label for="size1">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--size">
+                    <div class="filters__input filters__input--size">
+                        <input type="checkbox" id="size2" checked>
+                        <label for="size2">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--size">
+                    <div class="filters__input filters__input--size">
+                        <input type="checkbox" id="size3">
+                        <label for="size3">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--size">
+                    <div class="filters__input filters__input--size">
+                        <input type="checkbox" id="size4">
+                        <label for="size4">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--size">
+                    <div class="filters__input filters__input--size">
+                        <input type="checkbox" id="size5">
+                        <label for="size5">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="filters__item filters__item--size">
+                    <div class="filters__input filters__input--size">
+                        <input type="checkbox" id="size6">
+                        <label for="size6">
+                            Атрибут
+                            <span class="filters__num">3</span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Секция с товарами -->
+    <section class="catalog__products products">
+        <h1 class="catalog__title">Название категории</h1>
+        <div class="products__list">
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card product-card--disable">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                </div>
+                <button class="product-card__button">Сообщить о поступлении</button>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.png" alt="Product">
+                    <span class="product-card__badge">Хит продаж <img src="img/icon/fire.svg" alt="Fire"></span>
+                    <span class="product-card__discount">25%</span>
+                </div>
+                <div class="product-card__info">
+                    <span class="product-card__brand">Бренд</span>
+                    <p class="product-card__desc">Полное название товара в несколько строк для вида с обрывом в конце
+                        Полное название товара в несколько строк для вида с обрывом в конце</p>
+                    <div class="product-card__price">
+                        <span class="product-card__price-current">5 990 Р</span>
+                        <span class="product-card__price-old">5 990 Р</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
